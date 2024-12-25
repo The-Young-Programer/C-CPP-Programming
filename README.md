@@ -1,3 +1,22 @@
+
+```
+## NOTICE
+
+- I have lost access to my old GitHub account [@TYP-1] (https://github.com/The-Young-Programmer)). 
+
+- All updates for this project will now be managed here under this new account [@TYP-2] (https://github.com/The-Young-Programer).
+
+- Please submit all stars, issues, and pull requests here in this repository.
+
+Thank you for your understanding!
+
+```
+
+
+
+
+
+
 <h1 align="center">
  
 
