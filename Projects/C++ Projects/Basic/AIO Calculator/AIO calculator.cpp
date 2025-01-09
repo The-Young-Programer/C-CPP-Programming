@@ -1,148 +1,161 @@
 #include <iostream>
+#include <limits>  // For numeric_limits
 
 using namespace std;
 
-//addition
-long double add(long double num1, long double num2)
-{
-    long double result;
-    {
-        result = num1 + num2;
+// addition
+long double add(long double num1, long double num2) {
+    return num1 + num2;
+}
+
+// subtraction
+long double sub(long double num1a, long double num2a) {
+    return num1a - num2a;
+}
+
+// multiplication
+long double mltp(long double num1b, long double num2b) {
+    return num1b * num2b;
+}
+
+// division with check for division by zero
+long double dv(long double num1c, long double num2c) {
+    if (num2c == 0) {
+        cout << "Error: Division by zero is not allowed!" << endl;
+        return numeric_limits<long double>::infinity();  // Return infinity for division by zero
+    }
+    return num1c / num2c;
+}
+
+// exponentiation (limit to integer exponents for simplicity)
+long double power(long double base, long double exponent) {
+    if (exponent < 0) {
+        cout << "Error: Negative exponents are not supported in this calculator for now." << endl;
+        return -1;  // Return -1 to indicate an error
+    }
+    long double result = 1;
+    for (long double i = 0; i < exponent; i++) {
+        result = base * result;
     }
     return result;
 }
-//subtraction
-long double sub(long double num1a, long double num2a)
-{
-    long double resulta;
-    {
-        resulta = num1a - num2a;
-    }
-    return resulta;
-}
-//multiplication
-long double mltp(long double num1b, long double num2b)
-{
-    long double resultb;
-    {
-        resultb = num1b * num2b;
-    }
-    return resultb;
-}
-//division
-long double dv(long double num1c, long double num2c)
-{
-    long double resultc;
-    {
-        resultc = num1c / num2c;
-    }
-    return resultc;
-}
-//exponent
-long double power(long double base, long double exponent)
-{
-    long double resultd = 1;
-    for(long double i = 0; i < exponent; i++)
-    {
-       resultd = base * resultd; 
-    }
-    return resultd;
-}
 
 int panel;
-long double a;
-long double b;
+long double a, b;
 
-void ctrl_panel()
-{
-    cout << "Control Panel\n\nOperators: \n\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Exponent\n6.Multiplication Table\n7.Celcius to Farenheit\n8.Farenheit to Celcius\n\n0.Back\n";
+void ctrl_panel() {
+    cout << "\nControl Panel\n\nOperators: \n\n";
+    cout << "1. Addition\n";
+    cout << "2. Subtraction\n";
+    cout << "3. Multiplication\n";
+    cout << "4. Division\n";
+    cout << "5. Exponent\n";
+    cout << "6. Multiplication Table\n";
+    cout << "7. Celsius to Fahrenheit\n";
+    cout << "8. Fahrenheit to Celsius\n";
+    cout << "0. Back\n";
+    cout << "\nChoose an operation: ";
     cin >> panel;
-    switch(panel)
-    {
+    
+    if (cin.fail()) {  // Check if input is not a number
+        cin.clear();  // Clear error flag
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');  // Ignore bad input
+        cout << "Invalid input. Please enter a number.\n";
+        return;
+    }
+
+    switch(panel) {
         case 0:
             return;
-            break;
         case 1:
-            cout << "Addition\n\nFirst Number: \n";
+            cout << "Addition\nFirst Number: ";
             cin >> a;
-            cout << "Second Number: \n";
+            cout << "Second Number: ";
             cin >> b;
-            cout << add(a, b) << endl << endl;
+            cout << "Result: " << add(a, b) << endl;
             break;
         case 2:
-            cout << "Subtraction\n\nFirst Number: \n";
+            cout << "Subtraction\nFirst Number: ";
             cin >> a;
-            cout << "Second Number: \n";
+            cout << "Second Number: ";
             cin >> b;
-            cout << sub(a, b) << endl << endl;
+            cout << "Result: " << sub(a, b) << endl;
             break;
         case 3:
-            cout << "Multiplication\n\nFirst Number: \n";
+            cout << "Multiplication\nFirst Number: ";
             cin >> a;
-            cout << "Second Number: \n";
+            cout << "Second Number: ";
             cin >> b;
-            cout << mltp(a, b) << endl << endl;
+            cout << "Result: " << mltp(a, b) << endl;
             break;
         case 4:
-            cout << "Division\n\nFirst Number: \n";
+            cout << "Division\nFirst Number: ";
             cin >> a;
-            cout << "Second Number: \n";
+            cout << "Second Number: ";
             cin >> b;
-            cout << dv(a, b) << endl << endl;
+            cout << "Result: " << dv(a, b) << endl;
             break;
         case 5:
-            cout << "Exponent\n\nBase: \n";
+            cout << "Exponent\nBase: ";
             cin >> a;
-            cout << "Power: \n";
+            cout << "Power: ";
             cin >> b;
-            cout << power(a, b) << endl << endl;
+            if (b >= 0)
+                cout << "Result: " << power(a, b) << endl;
             break;
         case 7:
-            cout << "Celcius to Farenheit\n\nTemperature: \n";
+            cout << "Celsius to Fahrenheit\nTemperature in Celsius: ";
             cin >> a;
-            cout << a * 1.8 + 32 << "℉" << endl << endl;
+            cout << "Result: " << a * 1.8 + 32 << " ℉" << endl;
             break;
         case 8:
-            cout << "Farenheit to Celcius\n\nTemperature: \n";
+            cout << "Fahrenheit to Celsius\nTemperature in Fahrenheit: ";
             cin >> a;
-            cout << (a - 32) * 5/9 << "℃" << endl << endl;
+            cout << "Result: " << (a - 32) * 5 / 9 << " ℃" << endl;
             break;
         case 6:
-            cout << "Multiplication table\n\nPlease select a number you want to show the table of: \n";
+            cout << "Multiplication table\nEnter a number: ";
             int num;
             cin >> num;
-            int num2 = 0;
-            cout << "Range: \n";
+            cout << "Enter the range: ";
             int range;
             cin >> range;
-    
-            for(int i = 0; i < range; i++)
-            {
-                num2++;
-                cout << num << " x " << num2 << " = " << num * num2 << endl << endl;
+            for (int i = 1; i <= range; i++) {
+                cout << num << " x " << i << " = " << num * i << endl;
             }
-            break; 
-        }
+            break;
+        default:
+            cout << "Invalid option. Please choose a valid operation.\n";
+    }
 }
 
-int main()
-{
+int main() {
     int choice;
-    do
-    {
-        cout << "Welcone to NemoNet Calculator\n\n1.Enter\n0.Quit\n\n";
-        cout << " contact NemoNet on: \n\nGitHub\n";
+    do {
+        cout << "Welcome to NemoNet AIO Calculator\n\n";
+        cout << "1. Enter\n0. Quit\n";
+        cout << "\nContact NemoNet on: GitHub\n";
+        cout << "Choose an option: ";
         cin >> choice;
         
-        switch(choice)
-        {
+        if (cin.fail()) {  // Check if input is not a number
+            cin.clear();  // Clear error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');  // Ignore bad input
+            cout << "Invalid input. Please enter a number.\n";
+            continue;
+        }
+
+        switch(choice) {
             case 1:
                 ctrl_panel();
                 break;
             case 0:
+                cout << "Goodbye!\n";
                 return 0;
-                break;
+            default:
+                cout << "Invalid option. Please choose 1 to enter or 0 to quit.\n";
         }
-    }
-    while(choice != 0);
+    } while(choice != 0);
+
+    return 0;
 }
