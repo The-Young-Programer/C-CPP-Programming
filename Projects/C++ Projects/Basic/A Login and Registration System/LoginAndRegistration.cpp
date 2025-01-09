@@ -1,7 +1,6 @@
-// Autor : Nemonet TYP
+// Author : Nemonet TYP
 // Title: A Login and Registration System Programmed in C++
 // PROJECT FOR C/C++ PROGRAMMING TUTORIAL
-
 
 #include <iostream>
 #include <fstream>
@@ -18,17 +17,25 @@ int main()
 {
     login userLogin;
     string userChoice;
-    cout << "\t\t\t_____________________________________________\n\n\n";
-    cout << "\t\t\t         Welcome to the NEMO 2023 Login!       \n\n";
-    cout << "\t\t\t_________           Menu           __________\n\n";
-    cout << "\t | Press 1 to LOGIN                              |" << endl;
-    cout << "\t | Press 2 to REGISTER                           |" << endl;
-    cout << "\t | Press 3 if you forgot PASSWORD                |" << endl;
-    cout << "\t | Press 4 to EXIT                               |" << endl;
+
+    // Beautified Header
+    cout << "\t\t\t_________________________________________________________\n\n";
+    cout << "\t\t\t       Welcome to the NEMO 2023 Login System!          \n\n";
+    cout << "\t\t\t_________________________________________________________\n\n";
+    cout << "\t\t\t               Main Menu                               \n";
+    cout << "\t\t\t_________________________________________________________\n\n";
+
+    // Beautified Menu
+    cout << "\t | Press 1 to LOGIN                                      |" << endl;
+    cout << "\t | Press 2 to REGISTER                                   |" << endl;
+    cout << "\t | Press 3 if you forgot PASSWORD                        |" << endl;
+    cout << "\t | Press 4 to EXIT                                       |" << endl;
+
     cout << "\n\t\t\t Please Enter your choice: ";
     cin >> userChoice;
     cout << endl;
 
+    // Handling user input
     if (userChoice == "1")
     {
         userLogin.Login();
@@ -46,12 +53,14 @@ int main()
     }
     else if (userChoice == "4")
     {
-        cout << "\t\t\t Goodbye! \n\n";
+        // Beautified Goodbye Message
+        cout << "\t\t\t Thank you for using NEMO 2023. Goodbye! \n\n";
     }
     else
     {
+        // Beautified Error Message
         system("cls");
-        cout << "\t\t\t Please select from the options above\n";
+        cout << "\t\t\t Invalid choice! Please select an option from the menu above.\n";
         main();
     }
 }

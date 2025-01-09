@@ -103,6 +103,11 @@ void login::Registration()
     ifstream input("data.txt");
     input.seekg(0, ios::end);
 
+    if (!input)
+    {
+        cout << "\n\t\t\tFile not found\n";
+    }
+    
     if (input.tellg() == 0)
     {
         ofstream f1("data.txt", ios::app);

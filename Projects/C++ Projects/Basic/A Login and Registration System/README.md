@@ -1,46 +1,55 @@
-# A Login and Registration System Programmed in C++
+# Login and Registration System in C++
 
-A login and registration system programmed in C++ that utilizes password hashing so nobody but the user is able to see the password.
+## What You're Going to Learn
 
-## This program does the following:
+This project demonstrates a simple login and registration system in C++, where you'll learn about:
 
-   - Allows users to register a username, password, and security question into a database (text file)
-   - Once registered, the user's password and security question will be hashed and nobody but the user will be able to know their password/security question
-   - Using the text file, the user can login using their username and password
-   - Once logged in, the user has a special game they may play
-   - If a user forgets their password, there is a forget password option for the user which will ask for their username, and if it exists, the security question will be asked for. 
-    If the answer matches with what is in the database, the user will be able to use a new password.
-    
-    
-    
-    
-<h2>
-INFO
-</h2>
-<footer>
-A Login and Registration System Programmed in C++
+- **File handling** in C++ (reading from and writing to files)
+- **Password hashing** using the C++ Standard Library `std::hash`
+- **Menu-driven user interface** for login, registration, and password recovery
+- **Security Question-based password recovery**
+- **Game simulation** (DrunkGame) within the login system
 
-<br>
-DEVELOPED BY NEMONET (TYP)
+## What It's About
 
-<br><hr>
-***** IF YOU FIND ANY ERRORS OR ANY PROBLEMS RELATED THIS PROGRAM, FEEL FREE TO PULL AN ISSUE *****  
+This project is a basic C++ program that allows users to:
 
-<hr>
-***** LEAVE A COMMENT IF YOU LOVE MY WORK *****
+- Register with a username, password, and a security question
+- Login using a username and password
+- Recover their password through a security question if forgotten
+- Play a simple game after logging in
 
-<hr>
-***** PLS FORK AND GIVE A STAR IF YOU LIKE THIS PROJECT *****
+The system uses a text file (`data.txt`) to store user data, including usernames, hashed passwords, and security question hashes.
 
-</footer>
+## File Hierarchy
+```
+.
+├── login.cpp                   # Contains the implementation of the Login, Registration, Forgot Password, and DrunkGame functions
+├── login.h                     # Header file declaring the login class and its member functions
+├── LoginAndRegistration.cpp    # Main file that contains the menu and drives the login/registration flow
+└── data.txt                    # Data file used to store user credentials (username, hashed password, and security question hash)
+```
 
+## How to Run
 
+1. Clone the repository to your local machine.
+2. Open the project in a C++ IDE or a code editor.
+3. Compile and run the `LoginAndRegistration.cpp` file.
+4. Follow the on-screen menu to log in, register, or recover your password.
 
+## Features
 
+- **User Registration**: Allows a new user to register with a username, password, and a security question.
+- **User Login**: Allows a registered user to log in using their username and password.
+- **Forgot Password**: Users can recover their password using a security question.
+- **Game**: A simple simulation game (DrunkGame) is available once the user successfully logs in.
 
+## Future Improvements
 
+- Implement encryption for storing passwords more securely.
+- Add user session management (i.e., keeping the user logged in).
+- Improve error handling and validation of inputs.
 
+## License
 
-    
-    
-    
+- This project is open-source and available under the MIT License. Feel free to use and modify it for educational purposes.
