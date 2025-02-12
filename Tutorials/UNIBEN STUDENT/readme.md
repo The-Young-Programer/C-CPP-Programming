@@ -4,4 +4,4 @@
  - This Tutorial is mainly Practical.
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute

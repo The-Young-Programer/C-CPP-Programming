@@ -4,7 +4,7 @@
  - This is just a simple basic C++ questions <br> 
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 
 <br><br>
@@ -24,7 +24,7 @@
 
 <details><summary> What is Polymorphism?</summary>
 
-- It means one name many forms so we can say that in tis type of programming some function is used to perform different kind of operation.
+- It means one name many forms so we can say that in this type of programming some function is used to perform different kind of operation.
 - It is an important part of object oriented programming language.
 
 </details>
@@ -35,7 +35,7 @@
 
 - When first class is inherited by second class, second class is inherited by third class and so on is called multilevel inheritance.
 - In this type of inheritance each derived class is the base class for the next class.
-- In this type of inheritance atleast three class are compulsory.
+- In this type of inheritance at least three class are compulsory.
 
 </details>
 
@@ -61,7 +61,7 @@
 
 <details><summary> What is Hybrid Inheritance?</summary>
 
-- The combination of two or more than two inheeritance is called hybrid inheritance.
+- The combination of two or more than two inheritance is called hybrid inheritance.
 - It can be combination of any two or more than two inheritance (single, multilevel, hierarchical)
 - In this type of inheritance at least three class are compulsory.
 
@@ -84,7 +84,7 @@
 
 - It is used to perform the mathematical related operation
 - There are many predefine math function in C library
-- All the math funnction are predefine in `math.h` header file
+- All the math function are predefine in `math.h` header file
 
 </details>
 
@@ -104,7 +104,7 @@
 <details><summary> What are the advantages of C++?</summary>
 
 - C++ is a highly portable language means we can say that the software developed using C++ language can run on any platform
-- C++ is an object-oriented programming language which includes the concepts such as classes, objects, inheritance, polymorphism, abstruction, encapsulation
+- C++ is an object-oriented programming language which includes the concepts such as classes, objects, inheritance, polymorphism, abstraction, encapsulation
 - C++ has the concept of inheritance. Through inheritance, one can eliminate the redundant code and can reuse the existing classes.
 - Data hiding helps the programmer to build secure programs so that the program cannot be attacked by the invaders
 - It contains a rich function library 
@@ -115,7 +115,7 @@
 
 <details><summary> What is Structure?</summary>
 
-- It is a collectio of data of different data type
+- It is a collection of data of different data type
 - It is a user data type
 - Data can of `int, float, char, double` etc data type
 - We can access the member of structure by making the variable of structure
@@ -127,9 +127,9 @@
 
 <details><summary>What are advantages of Inheritance? </summary>
 
-- **Code Reuseability:** It means functiion inside base class is shared by all the derieved class
+- **Code Reusability:** It means function inside base class is shared by all the derived class
 - **Time Saving:** Because there is no need to define existing property (same code) of a class in another class
-- **Less Cost:** Because existing code is reused, it leads to less develoment and maintainance costs.
+- **Less Cost:** Because existing code is reused, it leads to less development and maintenance costs.
 - It helps to reduce code redundancy. 
 
 </details>
@@ -157,7 +157,7 @@ There are three types of constructor:
 
 <details><summary> What is private Access Specifier?</summary>
 
-- It is ussed to hide data memeber and memeber function from other classes
+- It is used to hide data member and member function from other classes
 - Private element of a class can be accessed only inside in its own class
 - Private element of a class can not be accessed out of that class
 
@@ -215,9 +215,9 @@ There are three key point of function:
 
 <hr>
 
-<details><summary> What are the main elemnt of OOPS?</summary>
+<details><summary> What are the main element of OOPS?</summary>
 
-There are four main elemnt of OOPS
+There are four main element of OOPS
 - Encapsulation
 - Abstraction
 - Inheritance
@@ -227,9 +227,9 @@ There are four main elemnt of OOPS
 
 <hr>
 
-<details><summary> What is countinue element?</summary>
+<details><summary> What is continue element?</summary>
 
-- It is a keyword which is used to skip the next statement and countinue the loop
+- It is a keyword which is used to skip the next statement and continue the loop
 - It is mostly used with loop
 
 </details>
@@ -238,7 +238,7 @@ There are four main elemnt of OOPS
 
 <details><summary> What is Constructor?</summary>
 
-- It is a special memeber of class that executes when we create the instance (object) of that class. In-other word, we can say that there is no need to call a constructor
+- It is a special member of class that executes when we create the instance (object) of that class. In-other word, we can say that there is no need to call a constructor
 - Its name the same as class name
 - It has no return type
 - It may be parameterized or non-parameterized
@@ -258,7 +258,7 @@ There are four main elemnt of OOPS
 
 <details><summary>Difference between while loop and do while loop?</summary>
 
-- The difference between while loop and do while loop is that in the case of while loop, if the conditiion is wrong then the body does not execute. But in the case of do while loop, it's body execute at least one time either condition true or false
+- The difference between while loop and do while loop is that in the case of while loop, if the condition is wrong then the body does not execute. But in the case of do while loop, it's body execute at least one time either condition true or false
 
 </details>
 
@@ -283,9 +283,9 @@ There are there types of loop used in C++
 
 <hr>
 
-<details><summary> What is functiion overloading?</summary>
+<details><summary> What is function overloading?</summary>
 
-- The function with same name and differnt parameter is called function overloading.
+- The function with same name and different parameter is called function overloading.
 
 </details>
 
@@ -301,12 +301,12 @@ There are there types of loop used in C++
 
 <details><summary> What is Variable?</summary>
 
-- It is a name of storage area which is used to store data or infofrmation
+- It is a name of storage area which is used to store data or information
 - It always contains last value assigned to it
 - Each value most be assigned a specific data type
     - for example:
     `int x=5`
-    Here 'x' ia a variable name and its value is 5 
+    Here 'x' is a variable name and its value is 5 
 
 </details>
 
@@ -324,7 +324,7 @@ There are there types of loop used in C++
 
 <details><summary> What is protected Access Specifier? </summary>
 
-- It is approximately same as private but it allows the accessibility of data meeber and memeber function to the child class
+- It is approximately same as private but it allows the accessibility of data member and member function to the child class
 - protected is used in the case of inheritance 
 
 </details>
@@ -356,7 +356,7 @@ There are two types of array in C++
 - Logical Operators
 - Assignment Operators
 - Bitwise Operators
-- Increment/Decremnet Operators
+- Increment/Decrement Operators
 - Conditional Operators
 - Special Operator
 
@@ -377,7 +377,7 @@ There are two types of array in C++
 
 <details><summary> What is Access Specifier?</summary>
 
-- It is a keyword which is used to provide accessibiliy of data member (variable) and member function (function) of a class
+- It is a keyword which is used to provide accessibility of data member (variable) and member function (function) of a class
 - It is also called access modifier
     for example: public, private, etc
 
@@ -387,8 +387,8 @@ There are two types of array in C++
 
 <details><summary> Difference between local and global variable?</summary>
 
-- Gloal variable is defined outside a function but Local vriable is defined inside a function
-- Global variable can be accessed anywhere in the program but Local variable can be accessed only withina function 
+- Global variable is defined outside a function but Local variable is defined inside a function
+- Global variable can be accessed anywhere in the program but Local variable can be accessed only within a function 
 
 </details>
 
@@ -396,7 +396,7 @@ There are two types of array in C++
 
 <details><summary> What is predefined function?</summary>
 
-- The function which is predefined in the library is called prdefined function
+- The function which is predefined in the library is called predefined function
 - It is also called library function
 - Example: printf, scanf, getch. clrscr, etc
 
@@ -408,7 +408,7 @@ There are two types of array in C++
 
 There are three parts of for loop
 - Initialization
-- Conditioon
+- Condition
 - Increment or Decrement (It is also called 'update')
 
 </details>
@@ -417,7 +417,7 @@ There are three parts of for loop
 
 <details><summary> What is Array?</summary>
 
-- Array is te collection of data of same data type
+- Array is the collection of data of same data type
 - It is used to store group of data simultaneously
 - It can store data of same data type (means an integer array can only store integer value, character array can only store only character value, and so on)
 - We can not fetch data from array directly therefore we use index point
@@ -426,7 +426,7 @@ There are three parts of for loop
 - array maybe of any data type like int, float, char, etc
     - for example:
     `int ar[5]={10,20,30,50,80};`
-    Here 'ar' is the name of array and '5' is the size of array means this array can store atmost 5 value
+    Here 'ar' is the name of array and '5' is the size of array means this array can store at most 5 value
 
 </details>
 
@@ -435,16 +435,16 @@ There are three parts of for loop
 <details><summary> What is Function Overriding?</summary>
 
 - Function with the same name and parameter is called function overriding
-- It is not possible to make two function with same name and same parameter ina single class, therefore to implement function overriding derived class is used
+- It is not possible to make two function with same name and same parameter in a single class, therefore to implement function overriding derived class is used
 
 </details>
 
 <hr>
 
-<details><summary> What is abstarction?</summary>
+<details><summary> What is abstraction?</summary>
 
 - Abstraction = Data hiding
-- In otherword, we can say that in this type of programming essential data is shown to the user or outside class and unessential data is hidden
+- In other words, we can say that in this type of programming essential data is shown to the user or outside class and unessential data is hidden
 - Members define with a public access specifier are accessible through the program
 - Members defined with a private access specifier are not accessible through out the program   
 
@@ -462,7 +462,7 @@ There are three parts of for loop
 
 <details><summary> What is Looping?</summary>
 
-- To run the body countinously until a required condition is fufill is called looping
+- To run the body continuously until a required condition is fufilled is called looping
 
 </details>
 
@@ -471,7 +471,7 @@ There are three parts of for loop
 <details><summary> What is Keyword?</summary>
 
 - The word which is predefined in the library is called keyword
-- Its functinality is also predefined
+- Its functionality is also predefined
 - we can not use keyword as variable
 
 </details>
@@ -493,7 +493,7 @@ There are five types of inheritance in C++
 
 <details><summary> What is function?</summary>
 
-- It is a collction of statement that performs a specific task
+- It is a collection of statement that performs a specific task
 - It executes when it is called by its name 
 - A large program is divided into a number of small building block for simplicity and this building block is called function
 - We can cal a function again and again
@@ -506,7 +506,7 @@ There are five types of inheritance in C++
 
 <details><summary> What is Constant?</summary>
 
-- It refers to a fixeed value (can not be change any instant)
+- It refers to a fixed value (can not be change any instant)
 - It is also called Literals
 - It can be of any data type like int, float, char etc
 
@@ -517,8 +517,8 @@ There are five types of inheritance in C++
 <details><summary> What is Multiple Inheritance?</summary>
 
 - When two or more than two classes are inherited by a single class simultaneously is called multiple inheritance
-- In otherword, we can say in this type of inheritance Base class may b etwo or more than two but derived class should be one 
-- In this type of inheritance atleast three class are compulsory
+- In other words, we can say in this type of inheritance Base class may be two or more than two but derived class should be one 
+- In this type of inheritance at least three class are compulsory
 
 </details>
 
@@ -526,11 +526,11 @@ There are five types of inheritance in C++
 
 <details><summary> What is Identifier</summary>
 
-- It is a name of differnt part of programming elements like variable name, method name, etc
+- It is a name of different part of programming elements like variable name, method name, etc
 - It is a string of alphanumeric characters that begins with alphabet or underscore
     - For example:
     `int x=5;`
-    Here 'x' ia a variable or we can say that identifiers
+    Here 'x' is a variable or we can say that identifiers
 
 </details>
 
@@ -548,7 +548,7 @@ There are five types of inheritance in C++
 
 There are two types of function in C
 - Predefined function
-- Userdefined function
+- User defined function
 
 </details>
 
@@ -558,7 +558,7 @@ There are two types of function in C
 
 - It is a collection of data of different data type
 - It is a user defined data type
-- Dat is of int, char, float, double, etc data type
+- Data is of int, char, float, double, etc data type
 - We can access the member of union by making the varaible of union
 - union keyword is used to create a union
 - union can store single value at a time 
@@ -617,4 +617,4 @@ There are two types of function in C
  - This is just a simple basic C++ questions <br> 
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute

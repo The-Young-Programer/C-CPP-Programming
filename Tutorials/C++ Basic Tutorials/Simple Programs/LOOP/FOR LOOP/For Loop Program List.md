@@ -3,7 +3,7 @@
 **Note:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 <br>
 
@@ -479,7 +479,7 @@
 
  <hr>
 
- <details><summary>PRINT ACII VALUE OF ALPHABET FROM A TO Z</summary>
+ <details><summary>PRINT ASCII VALUE OF ALPHABET FROM A TO Z</summary>
 
     ```
 
@@ -700,7 +700,7 @@
 
  <hr>
 
- <details><summary>HCF OF TWO NUMBER </summary>
+ <details><summary>HIGHEST COMMON FACTOR OF TWO NUMBERS </summary>
 
     ```
 
@@ -842,7 +842,7 @@
 
  <hr>
 
- <details><summary>FABON ACCI SERIES</summary>
+ <details><summary>FIBONACCI ASCII SERIES</summary>
 
     ```
 
@@ -885,7 +885,7 @@
 **Note:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 
 

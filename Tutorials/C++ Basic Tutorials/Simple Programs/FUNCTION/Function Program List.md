@@ -3,7 +3,7 @@
 **Note:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 <br><br>
 
@@ -226,7 +226,7 @@
 
  <hr>
 
- <details><summary>FUNCTION WITH NO RETURN TYPE AND NO PRAMETER</summary>
+ <details><summary>FUNCTION WITH NO RETURN TYPE AND NO PARAMETER</summary>
 
 ```
 
@@ -262,7 +262,7 @@
 
  <hr>
 
- <details><summary>FUNCTION WITH NO RETURN TYPE AND WITH PRAMETER</summary>
+ <details><summary>FUNCTION WITH NO RETURN TYPE AND WITH PARAMETER</summary>
 
 ```
 
@@ -297,7 +297,7 @@
 
  <hr>
 
- <details><summary>FUNCTION WITH RETURN TYPE AND NO PRAMETER</summary>
+ <details><summary>FUNCTION WITH RETURN TYPE AND NO PARAMETER</summary>
 
 ```
 
@@ -332,7 +332,7 @@
 
  <hr>
 
- <details><summary>FUNCTION WITH RETURN TYPE AND PRAMETER</summary>
+ <details><summary>FUNCTION WITH RETURN TYPE AND PARAMETER</summary>
 
 ```
 
@@ -530,7 +530,7 @@
 
  <hr>
 
- <details><summary>RECURSSION PROGRAM IN FUNCTION</summary>
+ <details><summary>RECURSION PROGRAM IN FUNCTION</summary>
 
 ```
 
@@ -592,7 +592,7 @@
 **Note:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 
 

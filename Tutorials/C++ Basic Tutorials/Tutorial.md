@@ -4,7 +4,7 @@
  - This Tutorial is mainly Practical.
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 
 
@@ -41,13 +41,13 @@
 	2. It includes the library of C++ into the program before the execution of program
 	
 - **conio**
-	1. It stsands for console input output
-	2. It is used to show the ouput on console window
+	1. It stands for console input output
+	2. It is used to show the output on console window
 	
 - **void**
 	1. It is a keyword 
 	2. It indicate that no one value is being returned by the function
-	3. If we use anyother keyword like `int, float, char` etc in place of void then we will use return keyword
+	3. If we use another keyword like `int, float, char` etc in place of void then we will use return keyword
 	
 - **main**
 	1. It is the function which is called the entry point of any program
@@ -124,7 +124,7 @@
 
       - **Definition**
      	1. It is a name of storage space which is used to store data
-     	2. It's value is changable
+     	2. It's value is changeable
      	3. It always contains last value stored to it
      	4. It's always declare with data type
 
@@ -198,28 +198,28 @@
   - <details><summary><b>Constant in C++</b></summary>
 
       - **Definition**
-        1. An elemnt of program whose value can not be changed at the time of execution of program is called constant
+        1. An element of program whose value can not be changed at the time of execution of program is called constant
         2. It is also called 'literals'
         3. It may be int, float and char data type
 
       - **Rules for constructing integer constant**
-        1. It must have atleast one digit
+        1. It must have at least one digit
         2. It must not have a decimal point
         3. It may be positive (+ve) or negative (-ve)
         4. The range of integer constant is between -32768 to +32767
-        5. No comma or blank sppace are allowed in integer constant
+        5. No comma or blank space are allowed in integer constant
 
       - **Rules for constructing floating constant**
-        1. It must have atleast one digit
+        1. It must have at least one digit
         2. It must not have a decimal point
         3. It may be positive or negative
-        4. No comma or blank sppace are allowed in floating constant
+        4. No comma or blank space are allowed in floating constant
 
 
       - **Rules for constructing character constant**
         1. It is a single alphabet, digit, or special symbol
         2. The length of character constant is 1 character
-        3. Charcter constant is enclosed within single quotes (Example: char c='A';)
+        3. Character constant is enclosed within single quotes (Example: char c='A';)
 
 
       - **Use of constant in program**
@@ -248,7 +248,7 @@
           2. When the function is called automatic variables are created and destroy when function is exited
           3. Automatic variables can nt be used outside that function in which its declared. It means w can say that it is private member
           4. Automatic variables are also known as local variable
-          5. `auto` keyword is usd to declare automatic ttype variable
+          5. `auto` keyword is used to declare automatic type variable
    
 			<br>
        		<div align="left">
@@ -291,7 +291,7 @@
 		- **static:storage class**
           1. Static variables can be used anywhere in the program inside or outside of a function or block
           2. The value of a static variable exits untill the end of program
-          3. The satic variable which is declared inside a function is called "internal static variable" and it can not be used outside that function
+          3. The static variable which is declared inside a function is called "internal static variable" and it can not be used outside that function
           4. The static variable which is declared outside a function is called external variable" and it can be used in all the function of that program
    
 			<br>
@@ -335,7 +335,7 @@
 
 
 		- **Register:storage class**
-          1. registr variables is stored in one of the register of system, instead of memory
+          1. register variables is stored in one of the register of system, instead of memory
           2. Value stored in register can be accessed faster than one that is stored in memory
    
 			<br>
@@ -368,7 +368,7 @@
 			
 
 		- **external:storage class**
-          1. Variable that can be used any where in the program is called external variable
+          1. Variable that can be used anywhere in the program is called external variable
           2. External storage class does not create a variable, but its inform the compiler of its existence
           3. `extern` keyword is used to declare external variable 
 
@@ -416,7 +416,7 @@
 	2. It's functionality is also predefined
 	3. It can not be used as an identifier
 
-- **Keywords in C++ are givien below:**
+- **Keywords in C++ are given below:**
 
 	```
 	1. default
@@ -1067,7 +1067,7 @@
 
 	  - **Definition**
 
-		To run the body countinously untill a required condition is fullfill is called looping.
+		To run the body continuously until a required condition is fulfilled is called looping.
 
 		When the condition will become 'false' the execution of loop will be stopped.
 
@@ -1129,7 +1129,7 @@
   - <details><summary><b>While Loop </b></summary>
 
 	  - **Definition**
-		- To run the body countinously untill a required condition is fullfill is called "looping".
+		- To run the body continuously until a required condition is fulfilled is called "looping".
 		- It is used to perform looping operation, when the condition will become false the execution of loop will be stopped 
 
 
@@ -1311,7 +1311,7 @@
   - **Definition**
 	1. It is a special type of variable which is used to store the address of another variable
 	2. It can store the address of same data types (i.e an integer pointer can store the address of integer variable, character pointer can store the address of character variable and so on)
-	3. If we add asterik(*) symbol with anny variable at the time of dclaring variable, then this variable is called "pointer variable"
+	3. If we add asterisk(*) symbol with any variable at the time of declaring variable, then this variable is called "pointer variable"
 	4. We use ampersand symbol to get the address of variable
 	5. * symbol is used to get the value at address which is hold by pointer
 
@@ -1325,7 +1325,7 @@
   - **Syntax**
 
 	1. Here 'a' is a normal variable
-	2. 'p' is apointer variable because it is associated with * symbol
+	2. 'p' is a pointer variable because it is associated with * symbol
 
 
 <br>
@@ -1362,7 +1362,7 @@
 	```
 
   - **Output Explanation**
-	Assume that the addres of variable a is 8284 and address of variable p is 8288, it may be different in your system
+	Assume that the address of variable a is 8284 and address of variable p is 8288, it may be different in your system
 
 	   <br>
 	   <div align="left">
@@ -1392,7 +1392,7 @@
 		2. It is used to store group of data simultaneously
 		3. It can store data of the same data type (i.e an integer array can store only integer value, character array can store only character value and so on)
 		4. We can not fetch data from array directly , therefore, we use index point
-		5. The indexing of array alway start with '0'
+		5. The indexing of array always start with '0'
 		6. Index value is always an integer number
 		7. Array may be of any data type like `int,char,float` etc
 
@@ -1576,7 +1576,7 @@
 		2. It is used to store group of data simultaneously
 		3. It can store data of the same data type (i.e an integer array can store only integer value, character array can store only character value and so on)
 		4. We can not fetch data from array directly , therefore, we use index point
-		5. The indexing of array alway start with '0'
+		5. The indexing of array always start with '0'
 		6. Index value is always an integer number
 		7. Array may be of any data type like `int,char,float` etc
 
@@ -1759,7 +1759,7 @@
   
 	   1. It is a collection of statement that performs a specific task
 	   2. It execute when it is called by its name
-	   3. A large program is devided into a number of small building block for simplicity and this building block is called function
+	   3. A large program is divided into a number of small building block for simplicity and this building block is called function
 	   4. We can call a function again and again
 	   5. The most important features of function is code reusability
 	   6. The C library provides many pre-defined functions 
@@ -1837,15 +1837,15 @@
 		Example:- `printf(), scanf(), clrscr(), getch()` etc
 
 
-        - **Userdefined Function**
+        - **User defined Function**
   
-		The function is made by the user is called userdefined function.
+		The function is made by the user is called user defined function.
 		Example:- `add(), sub(), multi(). div()` [**Note:**  These are userdefined name, it may different]
 
 
-	- **Category of Userdefined Function**
+	- **Category of User defined Function**
   
-		There are four category of userdefined function:
+		There are four category of user defined function:
 
   		- Function with no return type and no parameter
         - Function with no return type and with parameter
@@ -2029,9 +2029,9 @@
 	- **Call By Reference**
 
 
-		1. In ths type of calling a function, the reference of the value is passed at the time of calling
+		1. In this type of calling a function, the reference of the value is passed at the time of calling
 		2. Reference is also called address
-		3. When the address of data is passed at the time of calling so it is neccessary to use **pointer** in the place of parameter.
+		3. When the address of data is passed at the time of calling so it is necessary to use **pointer** in the place of parameter.
 		4. For better understanding, see the example below:-
 
 
@@ -2069,7 +2069,7 @@
 
 		- In this type of function, the functions contains a number of parameter with some initial value 
 			**[for example: `void sum(int x=10,int y=20)`]**
-		- At the etime of calling if there is no value is passed
+		- At the time of calling if there is no value is passed
 			**[for example: `sum();`]** 
 			then the default value will be x=10 and y=20, but if value passed 
 			**[for example: `sum(5,6);`]** 
@@ -2142,7 +2142,7 @@
 
 		```
 
-		In the above example, we can see that there is an array **ar[5]** in place of parameter and there as another array **x[5]={10,20,50,40,60}** and it is passed at the etime of calling therefore the value of array x will be copied into array ar.
+		In the above example, we can see that there is an array **ar[5]** in place of parameter and there as another array **x[5]={10,20,50,40,60}** and it is passed at the time of calling therefore the value of array x will be copied into array ar.
 
 
 	- **Recursion**
@@ -2422,7 +2422,7 @@
     - **Definition**
   
 	   1. It is used to perform the mathematical related operation
-	   2. There are many predefined math function in C libray
+	   2. There are many predefined math function in C library
 	   3. All the math function are predefined in `math.h` header file
 
 
@@ -2694,7 +2694,7 @@
 
 		**Note:** 
 		- Union will show only one last value correct cause it can store only single value at a time
-		- I am writing this program here so you can understsand difference b/w structure and union better
+		- I am writing this program here so you can understand difference b/w structure and union better
 
 
 		```
@@ -2803,7 +2803,7 @@
 
 
 
-	- **Example:- We can aslo change the default value of member of enum**
+	- **Example:- We can also change the default value of member of enum**
 
 		
 
@@ -2854,7 +2854,7 @@
 
 	2. `fstream` header file is used to perform file operator in C++, this header file provides many classes `(ifstream, ofstream, fstream)` to read from a file and write into a file
 
-	3. **ofstream:** This data type represenets the output file stream and is used to create files and to write information to files
+	3. **ofstream:** This data type represents the output file stream and is used to create files and to write information to files
 
 	4. **ifstream:** This data type represents the input file stream and is used to read information from files
 
@@ -3080,7 +3080,7 @@
  - This Tutorial is mainly Practical.
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 
 

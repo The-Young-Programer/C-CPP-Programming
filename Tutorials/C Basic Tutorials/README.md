@@ -17,5 +17,5 @@ Download our mobile App for full Tutorial:
 **NoteNote:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 

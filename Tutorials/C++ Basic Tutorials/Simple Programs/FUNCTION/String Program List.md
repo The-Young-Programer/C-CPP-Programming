@@ -3,7 +3,7 @@
 **Note:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 <br><br>
 
@@ -213,7 +213,7 @@
 
  <hr>
 
- <details><summary>COUNT ONLY ALPHABELTS IN A STRING</summary>
+ <details><summary>COUNT ONLY ALPHABETS IN A STRING</summary>
 
 ```
 
@@ -257,7 +257,7 @@
 
  <hr>
 
- <details><summary>COUNT ONLY DIGIT IN A STRING </summary>
+ <details><summary>COUNT ONLY DIGITS IN A STRING </summary>
 
 ```
 
@@ -301,7 +301,7 @@
 
  <hr>
 
- <details><summary>COUNT ONLY SPECIAL SYMBOL IN A STRING </summary>
+ <details><summary>COUNT ONLY SPECIAL SYMBOLS IN A STRING </summary>
 
 ```
 
@@ -347,7 +347,7 @@
 
  <hr>
 
- <details><summary> COUNT TOTAL NUMBER SPACE IN A SENTENCE </summary>
+ <details><summary> COUNT TOTAL NUMBER SPACES IN A SENTENCE </summary>
 
 ```
 
@@ -388,7 +388,7 @@
 
  <hr>
 
- <details><summary> COUNT NUMBER OF VOWEL AND CONSONENT IN A STRING </summary>
+ <details><summary> COUNT NUMBER OF VOWELS AND CONSONANTS IN A STRING </summary>
 
 ```
 
@@ -439,7 +439,7 @@
 **Note:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 
 

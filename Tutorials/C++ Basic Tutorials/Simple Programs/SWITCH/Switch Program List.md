@@ -3,7 +3,7 @@
 **Note:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 <br>
 
@@ -145,7 +145,7 @@
 
  <hr>
 
- <details><summary>CHECK ALPHABELT IS CONSONENT OR VOWEL METHOD 1</summary>
+ <details><summary>CHECK CHARACTER IS CONSONANT OR VOWEL METHOD 1</summary>
 
     ```
 
@@ -197,7 +197,7 @@
 
  <hr>
 
- <details><summary>CHECK ALPHABELT IS CONSONENT OR VOWEL METHOD 2</summary>
+ <details><summary>CHECK CHARACTER IS CONSONANT OR VOWEL METHOD 2</summary>
 
     ```
 
@@ -384,7 +384,7 @@
 **Note:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 
 

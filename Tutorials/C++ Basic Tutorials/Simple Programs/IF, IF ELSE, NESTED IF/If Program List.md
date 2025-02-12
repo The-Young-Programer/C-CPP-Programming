@@ -3,7 +3,7 @@
 **Note:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 <br><br>
 
@@ -110,7 +110,7 @@
 
  <hr>
 
- <details><summary>SHOW RESULT ACCORDING TO PEERCENT</summary>
+ <details><summary>SHOW RESULT ACCORDING TO PERCENT</summary>
 
     ```
 
@@ -278,7 +278,7 @@
 
  <hr>
 
- <details><summary>CHECK ALPHABET IS UPPERCASE OR LOWEWRCASE</summary>
+ <details><summary>CHECK ALPHABET IS UPPERCASE OR LOWERCASE</summary>
 
     ```
 
@@ -520,7 +520,7 @@
 **NoteNote:**
  - Give a STAR if you like this 
  - FORK to get more update
- - Make a PULL REQUEST to countribute
+ - Make a PULL REQUEST to contribute
 
 
 
