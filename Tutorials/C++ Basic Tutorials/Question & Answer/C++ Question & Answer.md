@@ -527,7 +527,7 @@ There are five types of inheritance in C++
 <details><summary> What is Identifier</summary>
 
 - It is a name of different part of programming elements like variable name, method name, etc
-- It is a string of alphanumeric characters that begins with alphabet or underscore
+- It is a string of alphanumeric characters that begins with alpha character or underscore
     - For example:
     `int x=5;`
     Here 'x' is a variable or we can say that identifiers

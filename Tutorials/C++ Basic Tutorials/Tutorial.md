@@ -165,9 +165,9 @@
         - A is the value of grade (Character value is always written in single quotes)
 
       - **Rules to declare a variable**
-     	1. The first letter of a variable should be alphabet or underscore(_)
+     	1. The first letter of a variable should be alpha character or underscore(_)
      	2. The first letter of a variable should not be digit
-     	3. After first character it may be combination of alphabets and digits
+     	3. After first character it may be combination of alpha characters and digits
      	4. Blank space are not allowed in variable name 
      	5. Variable name should not be a keyword 
 
@@ -217,7 +217,7 @@
 
 
       - **Rules for constructing character constant**
-        1. It is a single alphabet, digit, or special symbol
+        1. It is a single alpha character, digit, or special symbol
         2. The length of character constant is 1 character
         3. Character constant is enclosed within single quotes (Example: char c='A';)
 
@@ -2946,7 +2946,7 @@
 <br>
 
 
-- **Example: Count number of alphabet in a file**
+- **Example: Count number of alpha characters in a file**
   
 
 	```
@@ -2965,7 +2965,7 @@
 				if((i >=65 && i <=90) || (i >=97 && i <=122))
 				alpha++;
 			}
-			cout<<"\n No. of alphabelt in easy.txt file : "<<alpha;
+			cout<<"\n No. of alpha characters in easy.txt file : "<<alpha;
 	}
 
 	/* 

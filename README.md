@@ -500,10 +500,10 @@ int main() {
  
 3. **Variable Declaration: Rules to declare a variable**
 
- * The first letter of a variable should be alphabet or underscore (_)
+ * The first letter of a variable should be alpha character or underscore (_)
  * The first letter of a variable should not be digit
  * Names are case sensitive (`myVar` and `myvar` are different variables)
- * After first character it may be a combination of alphabets and digits
+ * After first character it may be a combination of alpha characters and digits
  * Blank sapces are not allowed in varaibles name
  * Variable name should not be a keyword
  

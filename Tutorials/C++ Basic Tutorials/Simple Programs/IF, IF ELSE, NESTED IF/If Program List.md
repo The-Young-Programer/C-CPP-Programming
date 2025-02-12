@@ -218,7 +218,7 @@
     int main()
         {
             char ch;
-            cout<<"Enter any alphabet\n";
+            cout<<"Enter any alpha character\n";
             cin>>ch;
             if(ch=='a'||ch=='e'|ch=='i'|ch=='o'|ch=='u')
             {
@@ -278,7 +278,7 @@
 
  <hr>
 
- <details><summary>CHECK ALPHABET IS UPPERCASE OR LOWERCASE</summary>
+ <details><summary>CHECK ALPHA CHARACTER IS UPPERCASE OR LOWERCASE</summary>
 
     ```
 
@@ -287,7 +287,7 @@
     int main()
         {
             char ch;
-            cout<<"Enter any alphabet\n";
+            cout<<"Enter any alpha character\n";
             cin>>ch;
             if(ch>=65&&ch<=90)
             {
@@ -455,7 +455,7 @@
 
  <hr>
 
- <details><summary>CHECK IF CHARACTER IS ALPHABET OR DIGIT OR SPECIAL SYMBOL</summary>
+ <details><summary>CHECK IF CHARACTER IS ALPHA OR DIGIT OR SPECIAL SYMBOL</summary>
 
     ```
 
@@ -467,7 +467,7 @@
             cout<<"Enter any chracter\n";
             cin>>ch;
             if(ch>=65&&ch<=90||ch>=97&&ch<=122)
-            cout<<"It is Alphabet";
+            cout<<"It is Alpha character";
             else if(ch>=48&&ch<=57)
             cout<<"It is Digit";
             else
@@ -496,7 +496,7 @@
     int main()
         {
             char ch;
-            cout<<"Enter any alphabet\n";
+            cout<<"Enter any alpha character\n";
             cin>>ch;
             if(ch>=65&&ch<=97)
             cout<<(char)(ch+32);

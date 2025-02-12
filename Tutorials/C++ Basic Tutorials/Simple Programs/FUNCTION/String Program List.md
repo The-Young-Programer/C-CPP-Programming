@@ -213,7 +213,7 @@
 
  <hr>
 
- <details><summary>COUNT ONLY ALPHABETS IN A STRING</summary>
+ <details><summary>COUNT ONLY ALPHA CHARACTERS IN A STRING</summary>
 
 ```
 
@@ -231,7 +231,7 @@
                 if((s[i]>=65&&s[i]<=90) || (s[i]>=97&&s[i]<=122))
                 alpha++;
             }
-            cout<<"Total Alphabelt="<<alpha;
+            cout<<"Total Alpha Characters="<<alpha;
 
         }
         
@@ -241,7 +241,7 @@
         ### Output ###
         Enter any string:
         nemo@net.com
-        Total Alphabelt=10
+        Total Alpha Characters=10
 
         */
 
@@ -274,7 +274,7 @@
             {
                 if(s[i]>=48&&s[i]<=57)
             }
-            cout<<"Total Alphabelt="<<digit;
+            cout<<"Total Alpha Characters="<<digit;
 
         }
         
@@ -284,7 +284,7 @@
         ### Output ###
         Enter any string:
         nemo@net.com
-        Total Alphabelt=10
+        Total Alpha Characters=10
 
         */
 
