@@ -1,23 +1,60 @@
-// Autor : Nemonet TYP
+// Autor : Om Roy
 // Title: A Login and Registration System Programmed in C++
 // PROJECT FOR C/C++ PROGRAMMING TUTORIAL
 
 
 #include <iostream>
 #include <fstream>
-#include <string.h>
-#include <vector>
+#include <string>
+#include <unordered_map>
 #include <functional>
-#include <cmath>
-#include <cstdlib>
 #include <ctime>
+#include <cstdlib>
 #include "login.h"
 using namespace std;
 
-void login::Login()
-{
-    string count;
-    string username, password, id, recordPass, recordSecurity;
+namespace {
+
+    // Helper function to hash strings
+    int hashString(const string& str) {
+        hash<string> mystdhash;
+        return mystdhash(str);
+    }
+
+    // Helper function to read user data from the file
+    bool readUserDataFromFile(const string& filename, unordered_map<string, pair<int, int>>& usersData) {
+        ifstream input(filename);
+        if (!input) return false;
+
+        string id, pass, security;
+        while (input >> id >> pass >> security) {
+            usersData[id] = { stoi(pass), stoi(security) };
+        }
+
+        return true;
+    }
+
+    // Helper function to write user data to the file
+    void writeUserDataToFile(const string& filename, const unordered_map<string, pair<int, int>>& usersData) {
+        ofstream output(filename, ios::trunc);
+        for (const auto& user : usersData) {
+            output << user.first << ' ' << user.second.first << ' ' << user.second.second << endl;
+        }
+    }
+
+    // Helper function to delete a specific user by ID
+    void deleteUserData(const string& filename, const string& userId) {
+        unordered_map<string, pair<int, int>> usersData;
+        readUserDataFromFile(filename, usersData);
+
+        usersData.erase(userId);
+        writeUserDataToFile(filename, usersData);
+    }
+
+} // Anonymous namespace
+
+void login::Login() {
+    string username, password;
     system("cls");
     cout << "\n\t\t\t Please enter the username and password: " << endl;
     cout << "\t\t\t USERNAME: ";
@@ -25,27 +62,19 @@ void login::Login()
     cout << "\t\t\t PASSWORD: ";
     cin >> password;
 
-    string loginHash = password;
-    hash<string> mystdhash;
-    int loginHashPassword = mystdhash(loginHash);
-
-    ifstream input("data.txt");
-
-    while (input >> id >> recordPass >> recordSecurity)
-    {
-        if (id == username && stoi(recordPass) == loginHashPassword)
-        {
-            count = "1";
-            system("cls");
-        }
+    int loginHashPassword = hashString(password);
+    unordered_map<string, pair<int, int>> usersData;
+    if (!readUserDataFromFile("data.txt", usersData)) {
+        cout << "\n Error reading data file\n";
+        return;
     }
-    input.close();
-    if (count == "1")
-    {
+
+    if (usersData.find(username) != usersData.end() && usersData[username].first == loginHashPassword) {
+        system("cls");
         cout << username << "\nLogin successful!\n";
+
         string choice = "1";
-        while (choice != "2")
-        {
+        while (choice != "2") {
             cout << "\t\t\t_____________________________________________\n\n\n";
             cout << "\t\t\t         Welcome to the NEMO 2023 Login!         \n\n";
             cout << "\t\t\t_______ Currently Logged In: " << username << " ________\n\n";
@@ -56,33 +85,27 @@ void login::Login()
             cin >> choice;
             cout << endl;
 
-            if (choice == "1")
-            {
+            if (choice == "1") {
                 system("cls");
                 DrunkGame();
             }
-            else if (choice == "2")
-            {
+            else if (choice == "2") {
                 system("cls");
                 cout << "Logging out" << endl;
             }
-            else
-            {
+            else {
                 system("cls");
                 cout << "Choice invalid, try again";
             }
         }
-    }
-    else
-    {
+    } else {
         system("cls");
         cout << "\n Username or password is incorrect, please try again or register\n";
     }
 }
 
-void login::Registration()
-{
-    string regUser, regPassword, regId, regPass, securityQuestion, regSecure, regCount;
+void login::Registration() {
+    string regUser, regPassword, securityQuestion;
     system("cls");
     cout << "\n\t\t\t Enter Username: ";
     cin >> regUser;
@@ -92,255 +115,126 @@ void login::Registration()
     cin.ignore();
     getline(cin, securityQuestion);
 
-    string hashing = regPassword;
-    hash<string> mystdhash;
-    int hashPassword = mystdhash(hashing);
+    int regPassHash = hashString(regPassword);
+    int securityHash = hashString(securityQuestion);
 
-    string secureHashing = securityQuestion;
-    hash<string> mystdhash2;
-    int securityHash = mystdhash2(secureHashing);
-
-    ifstream input("data.txt");
-    input.seekg(0, ios::end);
-
-    if (input.tellg() == 0)
-    {
-        ofstream f1("data.txt", ios::app);
-        f1 << regUser << ' ' << hashPassword << ' ' << securityHash << endl;
-        system("cls");
-        cout << "\n\t\t\t Registration successful!\n";
+    unordered_map<string, pair<int, int>> usersData;
+    if (!readUserDataFromFile("data.txt", usersData)) {
+        cout << "\n Error reading data file\n";
         return;
     }
-    else
-    {
-        ifstream input("data.txt");
-        while (input >> regId >> regPass >> regSecure)
-        {
-            if (regUser == regId)
-            {
-                string decision;
-                cout << "\n\t\tUsername already taken.\n";
-                cout << "\t\tEnter 1 to enter a new one\n";
-                cout << "\t\tEnter 2 to go back to the menu\n";
-                cout << "\n\t\tEnter choice: ";
-                cin >> decision;
 
-                if (decision == "1")
-                {
-                    Registration();
-                }
-                else if (decision == "2")
-                {
-                    system("cls");
-                    cout << "\tReturning to menu\n";
-                    return;
-                }
-                else
-                {
-                    system("cls");
-                    cout << "\tInvalid Entry, returning to menu." << endl;
-                    return;
-                }
-            }
-            else
-            {
-                regCount = "1";
-            }
-        }
-        if (regCount == "1")
-        {
-            ofstream f1("data.txt", ios::app);
-            f1 << regUser << ' ' << hashPassword << ' ' << securityHash << endl;
+    if (usersData.find(regUser) != usersData.end()) {
+        string decision;
+        cout << "\n\tUsername already taken.\n";
+        cout << "\t\tEnter 1 to enter a new one\n";
+        cout << "\t\tEnter 2 to go back to the menu\n";
+        cout << "\n\t\tEnter choice: ";
+        cin >> decision;
+
+        if (decision == "1") {
+            Registration();
+        } else if (decision == "2") {
             system("cls");
-            cout << "\n\t\t\t Registration successful!\n";
+            cout << "\tReturning to menu\n";
+            return;
+        } else {
+            system("cls");
+            cout << "\tInvalid Entry, returning to menu." << endl;
             return;
         }
     }
-}
 
-void login::DrunkGame()
-{
-    srand(time(0));
-    const int size = 60;
-    cout << "Enter a letter to begin \n ";
-    char x;
-    cin >> x;
-    int position = size / 2;
-    while (true)
-    {
-        cout << "|START|";
-        for (int i = 0; i < size; i++)
-        {
-            if (i == position)
-                cout << x;
-            else
-                cout << " ";
-        }
-        cout << "|END|" << endl;
-        int move = rand() % 3 - 1;
-        position = position + move;
-        if (position < 1)
-        {
-            cout << "Guess you were too drunk to make it to the end..." << endl;
-            break;
-        }
-        if (position > size - 1)
-        {
-            cout << "You might be drunk, but you made it to the end!" << endl;
-            break;
-        }
-        for (int sleep = 0; sleep < 1000000; ++sleep)
-            ;
-    }
-    system("pause");
+    usersData[regUser] = { regPassHash, securityHash };
+    writeUserDataToFile("data.txt", usersData);
+
     system("cls");
+    cout << "\n\t\t\t Registration successful!\n";
 }
 
-void login::ForgotPassword()
-{
-    string forgotChoice, count, secondCount;
+void login::ForgotPassword() {
+    string user;
     system("cls");
     cout << "\n\t\t\tPress 1 to enter USERNAME\n";
     cout << "\t\t\tPress 2 to go back to MENU\n";
     cout << "\n\t\t\tEnter choice: ";
-    cin >> forgotChoice;
+    cin >> user;
 
-    if (forgotChoice == "1")
-    {
-        string user, userSecurity, forgotId, forgotPass, forgotSecurity;
-        int newHashPassword, forgotSecHash;
+    if (user == "1") {
+        string username, userSecurity, newPassword;
         system("cls");
         cout << "\n\t\tEnter USERNAME: ";
-        cin >> user;
-        cout << endl;
-
-        ifstream input("data.txt");
-        while (input >> forgotId >> forgotPass >> forgotSecurity)
-        {
-            if (user == forgotId)
-            {
-                cout << "\n\t\tUser found\n\t\tSecurity Question: What was your favorite childhood movie?: ";
-                cin.ignore();
-                getline(cin, userSecurity);
-                cout << endl;
-
-                string hashing = userSecurity;
-                hash<string> mystdhash;
-                forgotSecHash = mystdhash(hashing);
-
-                if (stoi(forgotSecurity) == forgotSecHash)
-                {
-                    system("cls");
-                    string newPass;
-                    cout << "\t\tSecurity Question correct\n";
-                    cout << "\n\t\tEnter new PASSWORD: ";
-                    cin >> newPass;
-
-                    string newPassHash = newPass;
-                    hash<string> mystdhash2;
-                    newHashPassword = mystdhash2(newPassHash);
-
-                    count = "1";
-                    break;
-                }
-                else
-                {
-                    string incorrectChoice;
-                    system("cls");
-                    cout << "\t\tSecurity Question incorrect\n";
-                    cout << "\t\tPress 1 to Re-Enter\n\t\tPress 2 to return to MENU\n";
-                    cout << "\n\t\tEnter choice: ";
-                    cin >> incorrectChoice;
-
-                    if (incorrectChoice == "1")
-                    {
-                        ForgotPassword();
-                    }
-                    if (incorrectChoice == "2")
-                    {
-                        system("cls");
-                        cout << "\tReturning to MENU\n";
-                        return;
-                    }
-                    else
-                    {
-                        system("cls");
-                        cout << "\tInvalid answer... Returning to menu\n";
-                        return;
-                    }
-                }
-            }
-            else
-            {
-                string newChoice;
-                system("cls");
-                cout << "\t\tUser not found\n";
-                cout << "\t\tPress 1 to Re-Enter USERNAME\n\t\tPress 2 to return to MENU\n";
-                cout << "\n\t\tEnter choice: ";
-                cin >> newChoice;
-                if (newChoice == "1")
-                {
-                    ForgotPassword();
-                }
-                else if (newChoice == "2")
-                {
-                    system("cls");
-                    cout << "\tReturning to MENU\n";
-                    return;
-                }
-                else
-                {
-                    system("cls");
-                    cout << "\tChoice invalid... Returning to MENU\n";
-                    return;
-                }
-            }
-        }
-        input.close();
-        if (count == "1")
-        {
-            DeleteLine(user);
-            secondCount = "1";
-        }
-        if (secondCount == "1")
-        {
-            ofstream f1("data.txt", ios::app);
-            f1 << user << ' ' << newHashPassword << ' ' << forgotSecHash << endl;
-            system("cls");
-            cout << "\t\t\t Your password has been updated!\n";
+        cin >> username;
+        unordered_map<string, pair<int, int>> usersData;
+        if (!readUserDataFromFile("data.txt", usersData)) {
+            cout << "\n Error reading data file\n";
             return;
         }
-    }
-    else if (forgotChoice == "2")
-    {
+
+        if (usersData.find(username) == usersData.end()) {
+            cout << "\t\tUser not found\n";
+            return;
+        }
+
+        cout << "\n\t\tUser found\n\t\tSecurity Question: What was your favorite childhood movie?: ";
+        cin.ignore();
+        getline(cin, userSecurity);
+
+        int securityHash = hashString(userSecurity);
+        if (usersData[username].second == securityHash) {
+            system("cls");
+            cout << "\t\tSecurity Question correct\n";
+            cout << "\n\t\tEnter new PASSWORD: ";
+            cin >> newPassword;
+
+            int newPassHash = hashString(newPassword);
+            usersData[username] = { newPassHash, usersData[username].second };
+            writeUserDataToFile("data.txt", usersData);
+
+            cout << "\t\t\t Your password has been updated!\n";
+        } else {
+            system("cls");
+            cout << "\t\tSecurity Question incorrect\n";
+        }
+    } else if (user == "2") {
         system("cls");
         cout << "\tReturning to MENU\n";
-        return;
-    }
-    else
-    {
+    } else {
         system("cls");
         cout << "\tChoice invalid... Try again\n";
         ForgotPassword();
     }
 }
 
-void login::DeleteLine(string userDelete)
-{
-    string line;
-    ifstream myFile;
-    myFile.open("data.txt");
-    ofstream temp;
-    temp.open("temp.txt");
-    while (getline(myFile, line))
-    {
-        if (line.substr(0, userDelete.size()) != userDelete)
-        {
-            temp << line << endl;
+void login::DrunkGame() {
+    srand(time(0));
+    const int size = 60;
+    cout << "Enter a letter to begin \n ";
+    char x;
+    cin >> x;
+    int position = size / 2;
+    while (true) {
+        cout << "|START|";
+        for (int i = 0; i < size; i++) {
+            if (i == position)
+                cout << x;
+            else
+                cout << " ";
+        }
+        cout << "|END|" << endl;
+
+        int move = rand() % 3 - 1;
+        position = position + move;
+
+        if (position < 1) {
+            cout << "Guess you were too drunk to make it to the end..." << endl;
+            break;
+        }
+        if (position > size - 1) {
+            cout << "You might be drunk, but you made it to the end!" << endl;
+            break;
         }
     }
-    myFile.close();
-    temp.close();
-    remove("data.txt");
-    rename("temp.txt", "data.txt");
+    system("pause");
+    system("cls");
 }

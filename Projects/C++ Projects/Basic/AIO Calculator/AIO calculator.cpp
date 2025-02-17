@@ -1,148 +1,139 @@
 #include <iostream>
+#include <cmath> // For pow() function
 
 using namespace std;
 
-//addition
-long double add(long double num1, long double num2)
-{
-    long double result;
-    {
-        result = num1 + num2;
-    }
-    return result;
-}
-//subtraction
-long double sub(long double num1a, long double num2a)
-{
-    long double resulta;
-    {
-        resulta = num1a - num2a;
-    }
-    return resulta;
-}
-//multiplication
-long double mltp(long double num1b, long double num2b)
-{
-    long double resultb;
-    {
-        resultb = num1b * num2b;
-    }
-    return resultb;
-}
-//division
-long double dv(long double num1c, long double num2c)
-{
-    long double resultc;
-    {
-        resultc = num1c / num2c;
-    }
-    return resultc;
-}
-//exponent
-long double power(long double base, long double exponent)
-{
-    long double resultd = 1;
-    for(long double i = 0; i < exponent; i++)
-    {
-       resultd = base * resultd; 
-    }
-    return resultd;
+// Addition
+long double add(long double num1, long double num2) {
+    return num1 + num2;
 }
 
-int panel;
-long double a;
-long double b;
-
-void ctrl_panel()
-{
-    cout << "Control Panel\n\nOperators: \n\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Exponent\n6.Multiplication Table\n7.Celcius to Farenheit\n8.Farenheit to Celcius\n\n0.Back\n";
-    cin >> panel;
-    switch(panel)
-    {
-        case 0:
-            return;
-            break;
-        case 1:
-            cout << "Addition\n\nFirst Number: \n";
-            cin >> a;
-            cout << "Second Number: \n";
-            cin >> b;
-            cout << add(a, b) << endl << endl;
-            break;
-        case 2:
-            cout << "Subtraction\n\nFirst Number: \n";
-            cin >> a;
-            cout << "Second Number: \n";
-            cin >> b;
-            cout << sub(a, b) << endl << endl;
-            break;
-        case 3:
-            cout << "Multiplication\n\nFirst Number: \n";
-            cin >> a;
-            cout << "Second Number: \n";
-            cin >> b;
-            cout << mltp(a, b) << endl << endl;
-            break;
-        case 4:
-            cout << "Division\n\nFirst Number: \n";
-            cin >> a;
-            cout << "Second Number: \n";
-            cin >> b;
-            cout << dv(a, b) << endl << endl;
-            break;
-        case 5:
-            cout << "Exponent\n\nBase: \n";
-            cin >> a;
-            cout << "Power: \n";
-            cin >> b;
-            cout << power(a, b) << endl << endl;
-            break;
-        case 7:
-            cout << "Celcius to Farenheit\n\nTemperature: \n";
-            cin >> a;
-            cout << a * 1.8 + 32 << "℉" << endl << endl;
-            break;
-        case 8:
-            cout << "Farenheit to Celcius\n\nTemperature: \n";
-            cin >> a;
-            cout << (a - 32) * 5/9 << "℃" << endl << endl;
-            break;
-        case 6:
-            cout << "Multiplication table\n\nPlease select a number you want to show the table of: \n";
-            int num;
-            cin >> num;
-            int num2 = 0;
-            cout << "Range: \n";
-            int range;
-            cin >> range;
-    
-            for(int i = 0; i < range; i++)
-            {
-                num2++;
-                cout << num << " x " << num2 << " = " << num * num2 << endl << endl;
-            }
-            break; 
-        }
+// Subtraction
+long double sub(long double num1, long double num2) {
+    return num1 - num2;
 }
 
-int main()
-{
+// Multiplication
+long double multiply(long double num1, long double num2) {
+    return num1 * num2;
+}
+
+// Division (with zero check)
+long double divide(long double num1, long double num2) {
+    if (num2 == 0) {
+        cout << "Error: Division by zero is undefined.\n";
+        return 0;
+    }
+    return num1 / num2;
+}
+
+// Exponentiation using pow()
+long double power(long double base, long double exponent) {
+    return pow(base, exponent);
+}
+
+// Conversion functions
+long double celsiusToFahrenheit(long double celsius) {
+    return (celsius * 1.8) + 32;
+}
+
+long double fahrenheitToCelsius(long double fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
+}
+
+// Display multiplication table
+void multiplicationTable() {
+    int num, range;
+    cout << "Enter the number for multiplication table: ";
+    cin >> num;
+    cout << "Enter the range: ";
+    cin >> range;
+
+    for (int i = 1; i <= range; i++) {
+        cout << num << " x " << i << " = " << num * i << endl;
+    }
+}
+
+// Control panel function
+void controlPanel() {
     int choice;
-    do
-    {
-        cout << "Welcone to NemoNet Calculator\n\n1.Enter\n0.Quit\n\n";
-        cout << " contact NemoNet on: \n\nGitHub\n";
+    
+    do {
+        cout << "\nControl Panel\n";
+        cout << "1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n";
+        cout << "5. Exponentiation\n6. Multiplication Table\n";
+        cout << "7. Celsius to Fahrenheit\n8. Fahrenheit to Celsius\n";
+        cout << "0. Exit\n\nEnter your choice: ";
         cin >> choice;
-        
-        switch(choice)
-        {
+
+        long double a, b;
+
+        switch (choice) {
             case 1:
-                ctrl_panel();
+                cout << "Enter two numbers: ";
+                cin >> a >> b;
+                cout << "Result: " << add(a, b) << endl;
+                break;
+            case 2:
+                cout << "Enter two numbers: ";
+                cin >> a >> b;
+                cout << "Result: " << sub(a, b) << endl;
+                break;
+            case 3:
+                cout << "Enter two numbers: ";
+                cin >> a >> b;
+                cout << "Result: " << multiply(a, b) << endl;
+                break;
+            case 4:
+                cout << "Enter two numbers: ";
+                cin >> a >> b;
+                cout << "Result: " << divide(a, b) << endl;
+                break;
+            case 5:
+                cout << "Enter base and exponent: ";
+                cin >> a >> b;
+                cout << "Result: " << power(a, b) << endl;
+                break;
+            case 6:
+                multiplicationTable();
+                break;
+            case 7:
+                cout << "Enter temperature in Celsius: ";
+                cin >> a;
+                cout << "Fahrenheit: " << celsiusToFahrenheit(a) << "℉" << endl;
+                break;
+            case 8:
+                cout << "Enter temperature in Fahrenheit: ";
+                cin >> a;
+                cout << "Celsius: " << fahrenheitToCelsius(a) << "℃" << endl;
                 break;
             case 0:
-                return 0;
-                break;
+                cout << "Exiting calculator. Goodbye!\n";
+                return;
+            default:
+                cout << "Invalid choice. Please try again.\n";
         }
-    }
-    while(choice != 0);
+    } while (choice != 0);
+}
+
+// Main function
+int main() {
+    int option;
+    
+    do {
+        cout << "\nWelcome to NemoNet Calculator\n";
+        cout << "1. Start\n0. Quit\n\nEnter your choice: ";
+        cin >> option;
+
+        switch (option) {
+            case 1:
+                controlPanel();
+                break;
+            case 0:
+                cout << "Thank you for using NemoNet Calculator!\n";
+                return 0;
+            default:
+                cout << "Invalid choice. Please enter 1 to start or 0 to quit.\n";
+        }
+    } while (option != 0);
 }
