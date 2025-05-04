@@ -5,10 +5,9 @@ int main()
     char str[100];
    
    
-    cout<<"Enter some text or numbers and see magic:-"<<endl<<endl;
+    cout<<"Enter some text in UpperCase(A-Z) or numbers(0-9) and see magic:-"<<endl<<endl;
     cout<<"______________________________________"<<endl<<endl;
     cin.getline(str,100);
-    cout<<str;
     cout<<"\n______________________________________"<<endl<<endl;
    
     
@@ -16,272 +15,11 @@ int main()
         
         switch(str[b])
     {
-    case 'a':
-        {
-        cout<<"\n    #     ";    
-        cout<<"\n   # #    ";
-        cout<<"\n  #####   ";
-        cout<<"\n #     #  ";
-        cout<<"\n#       #  ";
-        cout<<"\n \n ";
-        break;
-        }
-    
-    case 'b':
-        {
-        cout<<"\n ######  ";
-        cout<<"\n #     # ";
-        cout<<"\n ######  ";
-        cout<<"\n #     # ";
-        cout<<"\n ######  ";
-        cout<<"\n \n ";
-        break;
-        }
-    
-    case 'c':
-        {
-        cout<<"\n #### ";
-        cout<<"\n#    ";
-        cout<<"\n#    ";
-        cout<<"\n#    #";
-        cout<<"\n #### ";
-        cout<<"\n \n  ";
-        break;
-        }
-    case 'd':
-        {
-        cout<<"\n #####   ";
-        cout<<"\n #    #  ";
-        cout<<"\n #    #  ";
-        cout<<"\n #    #  ";
-        cout<<"\n #####   ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'e':
-        {
-        cout<<"\n ######  ";
-        cout<<"\n #      ";
-        cout<<"\n #####   ";
-        cout<<"\n #      ";
-        cout<<"\n ######  ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'f':
-        {
-        cout<<"\n ######  ";
-        cout<<"\n #      ";
-        cout<<"\n #####    ";
-        cout<<"\n #      ";
-        cout<<"\n #      ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'g':
-        {
-        cout<<"\n  ##### "; 
-        cout<<"\n #      "; 
-        cout<<"\n #  ### ";
-        cout<<"\n #  # # ";
-        cout<<"\n  ### # ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'h':
-        {
-        cout<<"\n #     # ";
-        cout<<"\n #     # ";
-        cout<<"\n #######";
-        cout<<"\n #     # ";
-        cout<<"\n #     # ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'i':
-        {
-        cout<<"\n ####### ";
-        cout<<"\n    #    ";
-        cout<<"\n    #    ";
-        cout<<"\n    #    "; 
-        cout<<"\n ####### "; 
-        cout<<"\n \n ";
-        break;
-        }
-    case 'j':
-        {
-        cout<<"\n ########";
-        cout<<"\n     #   ";
-        cout<<"\n     #   ";
-        cout<<"\n     #   ";
-        cout<<"\n #####    ";  
-        cout<<"\n \n ";
-        break;
-        }
-    case 'k':
-        {
-        cout<<"\n #    #  ";      
-        cout<<"\n #   #   ";      
-        cout<<"\n # ##    ";      
-        cout<<"\n #   #   ";    
-        cout<<"\n #    #  ";   
-        cout<<"\n \n ";
-        break;
-        }
-    case 'l':
-        {
-        cout<<"\n #       ";
-        cout<<"\n #       ";
-        cout<<"\n #       ";
-        cout<<"\n #       ";
-        cout<<"\n ####### ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'm':
-        {
-        cout<<"\n ##    ##  ";
-        cout<<"\n # #  # #  ";
-        cout<<"\n #  #   #  ";
-        cout<<"\n #      #  ";
-        cout<<"\n #      #  ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'n':
-        {
-        cout<<"\n #     #  ";
-        cout<<"\n # #   #  ";
-        cout<<"\n #  #  #  ";
-        cout<<"\n #   # #  ";
-        cout<<"\n #     #  ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'o':
-        {
-        cout<<"\n  #####   ";
-        cout<<"\n #     #  ";
-        cout<<"\n #     #  ";
-        cout<<"\n #     #  ";
-        cout<<"\n  #####  ";
-        cout<<"\n \n ";
-        break;
-    case 'p':
-        {
-        cout<<"\n ######  ";
-        cout<<"\n #    #  ";
-        cout<<"\n #####   ";
-        cout<<"\n #       "; 
-        cout<<"\n #      ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'q':
-        {
-        cout<<"\n  #####   ";
-        cout<<"\n #     #  ";
-        cout<<"\n #     #  ";  
-        cout<<"\n #  #  #  ";
-        cout<<"\n  #####  ";
-        cout<<"\n       #  ";   
-        cout<<"\n \n ";
-        break;
-    case 'r':
-        {
-        cout<<"\n #####   ";  
-        cout<<"\n #    #  ";  
-        cout<<"\n #    #  ";
-        cout<<"\n # ###   ";
-        cout<<"\n #    #  ";
-        cout<<"\n #     # ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 's':
-        {
-        cout<<"\n  ###### ";
-        cout<<"\n #     ";
-        cout<<"\n  #####  ";
-        cout<<"\n       # ";
-        cout<<"\n ###### ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 't':
-        {
-        cout<<"\n ########  ";
-        cout<<"\n     #     ";
-        cout<<"\n     #     ";
-        cout<<"\n     #     ";
-        cout<<"\n     #     ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'u':
-        {
-        cout<<"\n #     # ";
-        cout<<"\n #     # ";
-        cout<<"\n #     # ";
-        cout<<"\n #     # ";
-        cout<<"\n  #####  ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'v':
-        {
-        cout<<"\n #       #";
-        cout<<"\n  #     # ";
-        cout<<"\n   #   #  "; 
-        cout<<"\n    # #    ";
-        cout<<"\n     #    ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'w':
-        {
-        cout<<"\n #         #  ";
-        cout<<"\n  #   #   #   ";
-        cout<<"\n   # # # #    ";
-        cout<<"\n    #   #      ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'x':
-        {
-        cout<<"\n #     #  ";
-        cout<<"\n  #   #   ";
-        cout<<"\n   # #    ";
-        cout<<"\n  #   #   ";
-        cout<<"\n #     #  ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'y':
-        {
-        cout<<"\n #     # ";
-        cout<<"\n  #   #  ";
-        cout<<"\n    #    ";
-        cout<<"\n    #    ";
-        cout<<"\n    #    ";
-        cout<<"\n \n ";
-        break;
-        }
-    case 'z':
-        {
-        cout<<"\n ######  ";
-        cout<<"\n     #   ";
-        cout<<"\n    #    ";
-        cout<<"\n  #     ";
-        cout<<"\n ######  ";
-        cout<<"\n \n ";
-        break;
-        }
     case 'A':
         {
         cout<<"\n    #     ";    
         cout<<"\n   # #    ";
-        cout<<"\n  #####   ";
+        cout<<"\n  # # #   ";
         cout<<"\n #     #  ";
         cout<<"\n#       #  ";
         cout<<"\n \n ";
@@ -290,50 +28,50 @@ int main()
     
     case 'B':
         {
-        cout<<"\n ######  ";
+        cout<<"\n # # #  ";
         cout<<"\n #     # ";
-        cout<<"\n ######  ";
+        cout<<"\n # # #  ";
         cout<<"\n #     # ";
-        cout<<"\n ######  ";
+        cout<<"\n # # #  ";
         cout<<"\n \n ";
         break;
         }
     
     case 'C':
         {
-        cout<<"\n #### ";
+        cout<<"\n # ## ";
         cout<<"\n#    ";
         cout<<"\n#    ";
         cout<<"\n#    #";
-        cout<<"\n #### ";
+        cout<<"\n # ## ";
         cout<<"\n \n  ";
         break;
         }
     case 'D':
         {
-        cout<<"\n #####   ";
+        cout<<"\n # # #   ";
         cout<<"\n #    #  ";
         cout<<"\n #    #  ";
         cout<<"\n #    #  ";
-        cout<<"\n #####   ";
+        cout<<"\n # # #   ";
         cout<<"\n \n ";
         break;
         }
     case 'E':
         {
-        cout<<"\n ######  ";
+        cout<<"\n # # ##  ";
         cout<<"\n #      ";
-        cout<<"\n #####   ";
+        cout<<"\n # # #   ";
         cout<<"\n #      ";
-        cout<<"\n ######  ";
+        cout<<"\n # # ##  ";
         cout<<"\n \n ";
         break;
         }
     case 'F':
         {
-        cout<<"\n ######  ";
+        cout<<"\n # # # #  ";
         cout<<"\n #      ";
-        cout<<"\n #####    ";
+        cout<<"\n # # #    ";
         cout<<"\n #      ";
         cout<<"\n #      ";
         cout<<"\n \n ";
@@ -341,11 +79,11 @@ int main()
         }
     case 'G':
         {
-        cout<<"\n  ##### "; 
+        cout<<"\n  # # # "; 
         cout<<"\n #      "; 
-        cout<<"\n #  ### ";
         cout<<"\n #  # # ";
-        cout<<"\n  ### # ";
+        cout<<"\n #    # ";
+        cout<<"\n  # # # ";
         cout<<"\n \n ";
         break;
         }
@@ -353,7 +91,7 @@ int main()
         {
         cout<<"\n #     # ";
         cout<<"\n #     # ";
-        cout<<"\n #######";
+        cout<<"\n # # # #";
         cout<<"\n #     # ";
         cout<<"\n #     # ";
         cout<<"\n \n ";
@@ -361,21 +99,21 @@ int main()
         }
     case 'I':
         {
-        cout<<"\n ####### ";
+        cout<<"\n # # # # ";
         cout<<"\n    #    ";
         cout<<"\n    #    ";
         cout<<"\n    #    "; 
-        cout<<"\n ####### "; 
+        cout<<"\n # # # # "; 
         cout<<"\n \n ";
         break;
         }
     case 'J':
         {
-        cout<<"\n ########";
-        cout<<"\n     #   ";
-        cout<<"\n     #   ";
-        cout<<"\n     #   ";
-        cout<<"\n #####    ";  
+        cout<<"\n  # # #";
+        cout<<"\n       #";
+        cout<<"\n       #";
+        cout<<"\n  #    #";
+        cout<<"\n   # ## ";  
         cout<<"\n \n ";
         break;
         }
@@ -395,7 +133,7 @@ int main()
         cout<<"\n #       ";
         cout<<"\n #       ";
         cout<<"\n #       ";
-        cout<<"\n ####### ";
+        cout<<"\n # # # # ";
         cout<<"\n \n ";
         break;
         }
@@ -421,18 +159,18 @@ int main()
         }
     case 'O':
         {
-        cout<<"\n  #####   ";
+        cout<<"\n  # # #   ";
         cout<<"\n #     #  ";
         cout<<"\n #     #  ";
         cout<<"\n #     #  ";
-        cout<<"\n  #####  ";
+        cout<<"\n  # # #  ";
         cout<<"\n \n ";
         break;
     case 'P':
         {
-        cout<<"\n ######  ";
+        cout<<"\n # # #  ";
         cout<<"\n #    #  ";
-        cout<<"\n #####   ";
+        cout<<"\n # # #   ";
         cout<<"\n #       "; 
         cout<<"\n #      ";
         cout<<"\n \n ";
@@ -440,20 +178,20 @@ int main()
         }
     case 'Q':
         {
-        cout<<"\n  #####   ";
+        cout<<"\n  # # #   ";
         cout<<"\n #     #  ";
         cout<<"\n #     #  ";  
         cout<<"\n #  #  #  ";
-        cout<<"\n  #####  ";
+        cout<<"\n  # # #  ";
         cout<<"\n       #  ";   
         cout<<"\n \n ";
         break;
     case 'R':
         {
-        cout<<"\n #####   ";  
+        cout<<"\n # # #   ";  
         cout<<"\n #    #  ";  
         cout<<"\n #    #  ";
-        cout<<"\n # ###   ";
+        cout<<"\n # # #   ";
         cout<<"\n #    #  ";
         cout<<"\n #     # ";
         cout<<"\n \n ";
@@ -461,17 +199,17 @@ int main()
         }
     case 'S':
         {
-        cout<<"\n  ###### ";
+        cout<<"\n  # # # ";
         cout<<"\n #     ";
-        cout<<"\n  #####  ";
+        cout<<"\n  # # #  ";
         cout<<"\n       # ";
-        cout<<"\n ###### ";
+        cout<<"\n # # # ";
         cout<<"\n \n ";
         break;
         }
     case 'T':
         {
-        cout<<"\n ########  ";
+        cout<<"\n # # # # # ";
         cout<<"\n     #     ";
         cout<<"\n     #     ";
         cout<<"\n     #     ";
@@ -485,7 +223,7 @@ int main()
         cout<<"\n #     # ";
         cout<<"\n #     # ";
         cout<<"\n #     # ";
-        cout<<"\n  #####  ";
+        cout<<"\n  # # #  ";
         cout<<"\n \n ";
         break;
         }
@@ -530,11 +268,11 @@ int main()
         }
     case 'Z':
         {
-        cout<<"\n ######  ";
+        cout<<"\n # # ##  ";
         cout<<"\n     #   ";
         cout<<"\n    #    ";
         cout<<"\n  #     ";
-        cout<<"\n ######  ";
+        cout<<"\n # # ##  ";
         cout<<"\n \n ";
         break;
         }
@@ -552,30 +290,30 @@ int main()
     case '1':
         {
         cout<<"\n   #  ";
-        cout<<"\n  ##  ";
+        cout<<"\n#  #  ";
         cout<<"\n   #  ";
         cout<<"\n   #  ";
-        cout<<"\n #####";
+        cout<<"\n# # # #"; 
         cout<<"\n \n   ";
         break;
         }
     case '2':
         {
-        cout<<"\n  ###  ";
+        cout<<"\n  # #  ";
         cout<<"\n #   # ";
         cout<<"\n    #  ";
         cout<<"\n  #    ";
-        cout<<"\n ##### ";
+        cout<<"\n #  # #";
         cout<<"\n \n    ";
         break;
         }
     case '3':
         {
-        cout<<"\n ##### ";
-        cout<<"\n    #  ";
-        cout<<"\n   ##  ";
-        cout<<"\n    #  ";
-        cout<<"\n#####  ";
+        cout<<"\n # #  ";
+        cout<<"\n#    #  ";
+        cout<<"\n    # ";
+        cout<<"\n#    #  ";
+        cout<<"\n # #   ";
         cout<<"\n \n    ";
         break;
         }
@@ -584,34 +322,34 @@ int main()
         cout<<"\n     # ";
         cout<<"\n   # # ";
         cout<<"\n  #  # ";
-        cout<<"\n ######";
+        cout<<"\n # ## #";
         cout<<"\n     # ";
         cout<<"\n \n    ";
         break;
         }
     case '5':
         {
-        cout<<"\n ######";
+        cout<<"\n # # #";
         cout<<"\n #     ";
-        cout<<"\n ##### ";
+        cout<<"\n # # # ";
         cout<<"\n      #";
-        cout<<"\n ##### ";
+        cout<<"\n # # # ";
         cout<<"\n \n    ";
         break;
         }
     case '6':
         {
-        cout<<"\n  #####";
+        cout<<"\n  # # #";
         cout<<"\n #     ";
-        cout<<"\n ##### ";
+        cout<<"\n # # # ";
         cout<<"\n #    #";
-        cout<<"\n  #### ";
+        cout<<"\n  # ## ";
         cout<<"\n \n    ";
         break;
         }
     case '7':
         {
-        cout<<"\n ######";
+        cout<<"\n # # ##";
         cout<<"\n     # ";
         cout<<"\n    #  ";
         cout<<"\n   #   ";
@@ -621,21 +359,21 @@ int main()
         }
     case '8':
         {
-        cout<<"\n  #####";
+        cout<<"\n  # # ";
         cout<<"\n #    #";
-        cout<<"\n  #### ";
+        cout<<"\n  # ##  ";
         cout<<"\n #    #";
-        cout<<"\n  #### ";
+        cout<<"\n   # #  ";
         cout<<"\n \n    ";
         break;
         }
     case '9':
         {
-        cout<<"\n  #### ";
+        cout<<"\n  # #  ";
         cout<<"\n #    # ";
-        cout<<"\n  ##### ";
+        cout<<"\n  # # # ";
         cout<<"\n      # ";
-        cout<<"\n  ####  ";
+        cout<<"\n  #  #  ";
         cout<<"\n \n     ";
         break;
         }
@@ -650,6 +388,7 @@ int main()
         }
     default:
         {
+        cout<<"PLEASE ENTER A NUMBER OR ALPHABET(A-Z)." ;   
         cout<<"\n ";
         cout<<"\n ";
         cout<<"\n ";
@@ -660,17 +399,15 @@ int main()
         }
     }    
     
-    return 0;
-
     }
   }
  }
+ cout<<"\t______________________________________"<<endl;
+ cout << "\n\t       And if you liked it,        " << endl;
+ cout << " \t      give a star on GitHub !   " << endl;
+ cout << "  \t           Thank you!               " << endl;
+ cout<<"\t______________________________________"<<endl<<endl;
+
+ return 0;
 }
 
-}
-    cout<<"\t______________________________________"<<endl;
-    cout << "\n\t       And if you liked it,        " << endl;
-    cout << " \t   give a star on GitHub !   " << endl;
-    cout << "  \t           Thank you!               " << endl;
-    cout<<"\t______________________________________"<<endl<<endl;
-}
