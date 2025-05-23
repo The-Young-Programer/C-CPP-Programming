@@ -1,57 +1,83 @@
-// Autor : Nemonet TYP
+// Autor : OM ROY
 // Title: A Login and Registration System Programmed in C++
 // PROJECT FOR C/C++ PROGRAMMING TUTORIAL
 
-
 #include <iostream>
 #include <fstream>
-#include <string.h>
-#include <vector>
-#include <functional>
-#include <cmath>
-#include <cstdlib>
+#include <string>
 #include <ctime>
-#include "login.cpp"
+#include <random>
 using namespace std;
-
-int main()
+bool checkCaptcha(string& captcha, string& user_captcha)
 {
-    login userLogin;
-    string userChoice;
-    cout << "\t\t\t_____________________________________________\n\n\n";
-    cout << "\t\t\t         Welcome to the NEMO 2023 Login!       \n\n";
-    cout << "\t\t\t_________           Menu           __________\n\n";
-    cout << "\t | Press 1 to LOGIN                              |" << endl;
-    cout << "\t | Press 2 to REGISTER                           |" << endl;
-    cout << "\t | Press 3 if you forgot PASSWORD                |" << endl;
-    cout << "\t | Press 4 to EXIT                               |" << endl;
-    cout << "\n\t\t\t Please Enter your choice: ";
-    cin >> userChoice;
-    cout << endl;
 
-    if (userChoice == "1")
-    {
-        userLogin.Login();
-        main();
-    }
-    else if (userChoice == "2")
-    {
-        userLogin.Registration();
-        main();
-    }
-    else if (userChoice == "3")
-    {
-        userLogin.ForgotPassword();
-        main();
-    }
-    else if (userChoice == "4")
-    {
-        cout << "\t\t\t Goodbye! \n\n";
-    }
-    else
-    {
-        system("cls");
-        cout << "\t\t\t Please select from the options above\n";
-        main();
-    }
+    return captcha.compare(user_captcha) == 0;
 }
+string generateCaptcha(int n)
+{
+    time_t t;
+    srand((unsigned)time(&t));
+    const char* chrs = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    string captcha = "";
+    while (n--)
+        captcha.push_back(chrs[rand() % 62]);
+    return captcha;
+}
+void registeruser() {
+    string u, p;
+    cout << "Enter username: ";
+    cin >> u;
+    cout << "Enter password: ";
+    cin >> p;
+    ofstream outfile("users.txt", ios::app);
+    outfile << u << " " << p<< endl;
+    outfile.close();
+    cout << "Registration successful!" << endl;
+}
+bool login() {
+    string u, p, su, sp;//su:-storedusername,sp:-storedpassword
+    cout << "Enter username: ";
+    cin >> u;
+    cout << "Enter password: ";
+    cin >> p;
+    string captcha = generateCaptcha(9);
+    cout << captcha;
+    string usr_captcha;
+    cout << "Enter above CAPTCHA: ";
+    cin >> usr_captcha;
+    if (checkCaptcha(captcha, usr_captcha))
+        printf("\nCAPTCHA Matched\n");
+    else
+        printf("\nCAPTCHA Not Matched\n");
+    ifstream infile("users.txt");
+    while (infile >> su >>sp) {
+        if (su == u && sp == p) {
+            infile.close();
+            return true;
+        }
+    }
+    infile.close();
+    return false;
+}
+
+int main() {
+    int c;
+    cout << "Enter your choice(1.Registration,2.Login): ";
+    cin >> c;
+    if (c == 1) {
+        registeruser();
+    } 
+    else if (c == 2) {
+        if (login()) {
+            cout << "Login successful!" << endl;
+        } 
+        else {
+            cout << "Login failed!" << endl;
+        }
+    } 
+    else {
+        cout << "Invalid !" << endl;
+    }
+    return 0;
+}
+
